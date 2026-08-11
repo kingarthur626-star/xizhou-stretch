@@ -147,8 +147,7 @@
       .compact-steps p{font-size:14px;line-height:1.55}
 
       .contact{padding:26px 16px}
-      .contact .actions .btn.primary,
-      .contact .actions a[href*="line.me"]{display:none}
+      
       .contact .actions{margin-top:14px}
       .contact .actions .btn{min-height:46px;padding:0 16px}
 
@@ -178,10 +177,101 @@
       }
     }
 
+
+    /* v1.0.9 頂端慢速跑馬燈 */
+    .brand{
+      min-width:0;
+      flex:1;
+    }
+    .slogan-marquee{
+      position:relative;
+      overflow:hidden;
+      min-width:0;
+      width:min(620px, 58vw);
+      white-space:nowrap;
+      mask-image:linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+      -webkit-mask-image:linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+    }
+    .slogan-track{
+      display:flex;
+      width:max-content;
+      gap:56px;
+      will-change:transform;
+      animation:slogan-scroll 22s linear infinite;
+      font-weight:900;
+      color:#2e2a32;
+    }
+    .slogan-track span{
+      flex:none;
+      display:block;
+    }
+    @keyframes slogan-scroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(calc(-50% - 28px))}
+    }
+    @media(max-width:800px){
+      .slogan-marquee{
+        width:calc(100vw - 116px);
+      }
+      .slogan-track{
+        animation-duration:20s;
+        gap:44px;
+      }
+      @keyframes slogan-scroll{
+        from{transform:translateX(0)}
+        to{transform:translateX(calc(-50% - 22px))}
+      }
+    }
+    @media(max-width:520px){
+      .slogan-marquee{
+        width:calc(100vw - 102px);
+      }
+      .slogan-track{
+        animation-duration:18s;
+        font-size:15px;
+      }
+    }
+    @media(prefers-reduced-motion: reduce){
+      .slogan-track{
+        animation:none;
+      }
+    }
+
+
+    /* v1.0.11 修正手機版 LINE 報名被隱藏 */
+    #contact .actions .btn{
+      display:inline-flex !important;
+      visibility:visible !important;
+      opacity:1 !important;
+    }
+    @media(max-width:520px){
+      #contact .actions{
+        display:grid !important;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+      }
+      #contact .actions .btn{
+        display:flex !important;
+        width:100%;
+        min-height:52px;
+      }
+      #contact .actions .btn:last-child{
+        grid-column:1 / -1;
+      }
+    }
+
 </style>
 </head>
 <body>
-<header class="topbar"><div class="wrap nav"><div class="brand"><div class="brand-mark">健康</div><div>筋長一吋，壽延十年，筋縮則亡，筋柔則康。</div></div><nav class="navlinks"><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
+<header class="topbar"><div class="wrap nav"><div class="brand"><div class="brand-mark">健康</div>
+<div class="slogan-marquee" aria-label="《黃帝內經》：筋長一吋，壽延十年，筋縮則亡，筋柔則康，骨正筋柔，氣血自流。">
+  <div class="slogan-track" aria-hidden="true">
+    <span>《黃帝內經》：筋長一吋，壽延十年，筋縮則亡，筋柔則康，骨正筋柔，氣血自流。</span>
+    <span>《黃帝內經》：筋長一吋，壽延十年，筋縮則亡，筋柔則康，骨正筋柔，氣血自流。</span>
+  </div>
+</div>
+</div>
+<nav class="navlinks"><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
 <main>
 
 <section class="hero">
@@ -300,6 +390,6 @@
 </main>
 <footer><div class="wrap">溪洲公園拉筋班｜舒活養生・健康伸展｜板橋・樹林</div></footer>
 
-<!-- 溪洲公園拉筋班網站 v1.0.8 -->
+<!-- 溪洲公園拉筋班網站 v1.0.11 -->
 </body>
 </html>
