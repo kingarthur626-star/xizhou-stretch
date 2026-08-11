@@ -32,53 +32,225 @@
     .steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step:before{counter-increment:step;content:counter(step);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:900;margin-bottom:12px}.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:10px}.faq summary{font-weight:900;cursor:pointer}.faq p{margin:10px 0 0;color:var(--muted)}
     .contact{text-align:center;background:linear-gradient(145deg,#fff1f7,#f5efff);border:1px solid var(--line);border-radius:32px;padding:34px 20px}.contact h2{font-size:38px;margin:0 0 8px}.contact p{color:var(--muted)}.contact-lines{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 16px;margin:16px 0;font-weight:900}footer{padding:32px 0 90px;color:#756d79;text-align:center;font-size:14px}.floating{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:10px}.float-btn{display:flex;align-items:center;justify-content:center;min-width:128px;height:48px;padding:0 16px;border-radius:999px;text-decoration:none;font-weight:900;box-shadow:0 12px 30px rgba(54,38,64,.18)}.float-line{background:#06c755;color:#fff}.float-call{background:#fff;color:var(--brand);border:1px solid var(--line)}
     @media(max-width:800px){.gallery-grid{grid-template-columns:1fr}.photo-main img{min-height:0;height:auto}.photo-stack{grid-template-columns:1fr 1fr}.photo-stack .photo-card img{height:220px}.navlinks{display:none}.hero{padding-top:34px}.hero-grid{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}}@media(max-width:520px){.photo-stack{grid-template-columns:1fr}.photo-stack .photo-card img{height:auto}.map-frame{height:300px}.wrap{width:min(100% - 22px,1100px)}.grid-4,.steps{grid-template-columns:1fr}h1{font-size:42px}.hero-card{padding:22px}.contact h2{font-size:30px}.floating{left:11px;right:11px;bottom:10px;flex-direction:row}.float-btn{flex:1;min-width:0}footer{padding-bottom:84px}}
+  
+    /* v1.0.6 手機精簡版 */
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      grid-template-areas:
+        "intro card"
+        "photo photo";
+      gap:24px 28px;
+      align-items:center
+    }
+    .hero-intro{grid-area:intro}
+    .hero-card{grid-area:card}
+    .hero-photo{
+      grid-area:photo;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 10px 34px rgba(68,45,88,.09)
+    }
+    .hero-photo img{
+      display:block;width:100%;height:auto;max-height:520px;object-fit:cover
+    }
+    .hero-photo .photo-caption{padding:14px 18px}
+    .hero-photo .photo-caption h3{margin:0 0 4px}
+    .hero-photo .photo-caption p{margin:0;color:var(--muted)}
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px
+    }
+    .gallery-grid .photo-card img{height:300px;object-fit:cover}
+    .gallery-grid .photo-card{height:100%}
+
+    .grid-4.compact-grid{grid-template-columns:repeat(4,1fr)}
+    .steps.compact-steps{grid-template-columns:repeat(4,1fr)}
+
+    .info-grid.compact-info{
+      grid-template-columns:repeat(2,1fr)
+    }
+    .info-grid.compact-info .full{
+      grid-column:1 / -1
+    }
+
+    .floating{
+      right:16px;bottom:12px;gap:8px
+    }
+    .float-btn{
+      height:52px;min-width:120px;padding:0 16px;font-size:16px
+    }
+
+    @media(max-width:800px){
+      .hero-grid{
+        grid-template-columns:1fr;
+        grid-template-areas:
+          "intro"
+          "photo"
+          "card";
+        gap:18px
+      }
+      .hero-photo{border-radius:22px}
+      .hero-photo img{max-height:none}
+      .gallery-grid{grid-template-columns:1fr 1fr}
+      .gallery-grid .photo-card img{height:220px}
+      .grid-4.compact-grid{grid-template-columns:repeat(2,1fr)}
+      .steps.compact-steps{grid-template-columns:repeat(2,1fr)}
+      .info-grid.compact-info{grid-template-columns:repeat(2,1fr)}
+      .info-grid.compact-info .full{grid-column:1 / -1}
+      .card{padding:18px}
+      .info{padding:24px}
+      section{padding:28px 0}
+    }
+
+    @media(max-width:520px){
+      body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+      .hero{padding:28px 0 20px}
+      .hero-grid{gap:16px}
+      .lead{font-size:18px;line-height:1.7}
+      .hero-card{padding:20px;border-radius:24px}
+      .hero-card h2{font-size:27px}
+      .hero-photo .photo-caption{padding:12px 14px}
+      .hero-photo .photo-caption p{font-size:14px}
+
+      .gallery-grid{grid-template-columns:1fr 1fr;gap:12px}
+      .gallery-grid .photo-card img{height:175px}
+      .photo-caption{padding:11px 12px}
+      .photo-caption h3{font-size:17px}
+      .photo-caption p{font-size:13px;line-height:1.55}
+
+      .grid-4.compact-grid{grid-template-columns:1fr 1fr;gap:12px}
+      .compact-grid .card{padding:16px}
+      .compact-grid .icon{width:40px;height:40px;font-size:21px;margin-bottom:8px}
+      .compact-grid .card h3{font-size:18px}
+      .compact-grid .card p{font-size:14px;line-height:1.55}
+
+      .info{padding:20px;border-radius:26px}
+      .info h2{font-size:30px;margin-bottom:14px}
+      .info-grid.compact-info{grid-template-columns:1fr 1fr;gap:10px}
+      .info-item{padding:13px;border-radius:15px}
+      .info-item strong{font-size:12px}
+      .info-item span{font-size:17px;line-height:1.45}
+      .note{padding:13px 14px;font-size:14px}
+      .map-head{padding:14px}
+      .map-head strong{font-size:18px}
+      .map-frame{height:285px}
+
+      .steps.compact-steps{grid-template-columns:1fr 1fr;gap:12px}
+      .compact-steps .card{padding:16px}
+      .compact-steps .step:before{width:34px;height:34px}
+      .compact-steps h3{font-size:18px}
+      .compact-steps p{font-size:14px;line-height:1.55}
+
+      .contact{padding:26px 16px}
+      .contact .actions .btn.primary,
+      .contact .actions a[href*="line.me"]{display:none}
+      .contact .actions{margin-top:14px}
+      .contact .actions .btn{min-height:46px;padding:0 16px}
+
+      .floating{
+        left:10px;
+        right:10px;
+        bottom:calc(8px + env(safe-area-inset-bottom));
+        flex-direction:row;
+        gap:8px
+      }
+      .float-btn{
+        flex:1;
+        min-width:0;
+        height:50px;
+        font-size:16px;
+        padding:0 10px
+      }
+      footer{padding-bottom:22px}
+    }
+
   </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav"><div class="brand"><div class="brand-mark">溪洲</div><div>溪洲公園拉筋班</div></div><nav class="navlinks"><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">板橋・樹林在地健康伸展</div><h1>溪洲公園<span>拉筋班</span></h1><p class="lead">舒活養生・健康伸展。每週一起伸展、活動身體，不比柔軟度，依自己的狀況循序漸進，養成固定運動的好習慣。</p></div><aside class="hero-card"><span class="hero-badge">本期課程</span><h2>每週二晚上</h2><div class="big">20:00～21:00</div><ul><li>上課日期：8/18～10/27</li><li>溪洲公園活動中心</li><li>板橋區溪崑二街 113 號</li><li>初學者、熟齡朋友都歡迎</li></ul></aside></div></section>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-intro">
+        <div class="eyebrow">板橋・樹林在地健康伸展</div>
+        <h1>溪洲公園<span>拉筋班</span></h1>
+        <p class="lead">舒活養生・健康伸展。每週一起伸展、活動身體，不比柔軟度，依自己的狀況循序漸進，養成固定運動的好習慣。</p>
+      </div>
+
+      <div class="hero-photo">
+        <img loading="eager" decoding="async"
+             src="images/class-group-stretch.webp"
+             alt="溪洲公園拉筋班實際上課，學員一起進行伸展練習">
+        <div class="photo-caption">
+          <h3>真實上課實景</h3>
+          <p>大家固定每週一起活動，初學者、熟齡朋友都能依自己的狀況參與。</p>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <span class="hero-badge">本期課程</span>
+        <h2>每週二晚上</h2>
+        <div class="big">20:00～21:00</div>
+        <ul>
+          <li>上課日期：8/18～10/27</li>
+          <li>溪洲公園活動中心</li>
+          <li>板橋區溪崑二街 113 號</li>
+          <li>初學者、熟齡朋友都歡迎</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
 
 <section id="gallery">
   <div class="wrap">
     <div class="section-title">
-      <h2>上課實景</h2>
-      <p>真實上課照片，先看看課程氣氛與實際帶領方式。</p>
+      <h2>課程實景</h2>
+      <p>老師示範、帶領與實際練習。</p>
     </div>
     <div class="gallery-grid">
-      <article class="photo-card photo-main">
-        <img loading="lazy" decoding="async" src="images/class-group-stretch.webp" alt="溪洲公園拉筋班學員一起進行伸展練習">
+      <article class="photo-card">
+        <img loading="lazy" decoding="async"
+             src="images/instructor-demo.webp"
+             alt="溪洲公園拉筋班老師示範動作">
         <div class="photo-caption">
-          <h3>大家一起伸展</h3>
-          <p>依自己的身體狀況循序漸進，固定每週一起活動。</p>
+          <h3>老師示範帶領</h3>
+          <p>動作有說明、有示範，初學者也容易跟上。</p>
         </div>
       </article>
-      <div class="photo-stack">
-        <article class="photo-card">
-          <img loading="lazy" decoding="async" src="images/instructor-demo.webp" alt="溪洲公園拉筋班老師示範動作">
-          <div class="photo-caption">
-            <h3>老師示範帶領</h3>
-            <p>動作有說明、有示範，初學者也容易跟上。</p>
-          </div>
-        </article>
-        <article class="photo-card">
-          <img loading="lazy" decoding="async" src="images/class-core-training.webp" alt="溪洲公園拉筋班核心穩定練習">
-          <div class="photo-caption">
-            <h3>核心與穩定練習</h3>
-            <p>伸展之外，也會搭配適度的身體活動與穩定訓練。</p>
-          </div>
-        </article>
-      </div>
-      <article class="card">
-        <div class="icon">📸</div>
-        <h3>真實上課紀錄</h3>
-        <p>網站照片皆為實際課程紀錄。歡迎初學者、熟齡朋友一起參與，不需要本來就很柔軟。</p>
+
+      <article class="photo-card">
+        <img loading="lazy" decoding="async"
+             src="images/class-core-training.webp"
+             alt="溪洲公園拉筋班核心穩定練習">
+        <div class="photo-caption">
+          <h3>核心與穩定練習</h3>
+          <p>伸展之外，也搭配適度的身體活動與穩定訓練。</p>
+        </div>
       </article>
     </div>
   </div>
 </section>
-<section id="about"><div class="wrap"><div class="section-title"><h2>適合想開始動一動的你</h2><p>不用本來就很柔軟，重點是找到適合自己的節奏。</p></div><div class="grid-4"><article class="card"><div class="icon">🪑</div><h3>久坐久站</h3><p>平常工作久坐、久站，想固定安排時間活動身體。</p></article><article class="card"><div class="icon">🙆</div><h3>身體較緊</h3><p>肩頸、腰背、腿部容易覺得緊繃，希望慢慢增加活動度。</p></article><article class="card"><div class="icon">🌿</div><h3>初學者</h3><p>沒有拉筋或運動基礎也可以，依個人能力循序漸進。</p></article><article class="card"><div class="icon">🤝</div><h3>一起養成習慣</h3><p>一群人固定每週一起動，更容易把運動變成生活的一部分。</p></article></div></div></section>
-<section id="course"><div class="wrap"><div class="info"><h2>本期課程資訊</h2><div class="info-grid"><div class="info-item"><strong>上課日期</strong><span>8/18～10/27</span></div><div class="info-item"><strong>上課時間</strong><span>每週二 20:00～21:00</span></div><div class="info-item"><strong>上課地點</strong><span>溪洲公園活動中心</span></div><div class="info-item"><strong>地址</strong><span>板橋區溪崑二街 113 號</span></div><div class="info-item"><strong>課程費用</strong><span>300 元</span></div><div class="info-item"><strong>保證金</strong><span>另收 200 元</span></div></div><div class="note">請假 3 次（含）以內，期末退回保證金 200 元。</div>
+
+<section id="about"><div class="wrap"><div class="section-title"><h2>適合想開始動一動的你</h2><p>不用本來就很柔軟，重點是找到適合自己的節奏。</p></div><div class="grid-4 compact-grid"><article class="card"><div class="icon">🪑</div><h3>久坐久站</h3><p>想固定安排時間，讓身體多活動。</p></article><article class="card"><div class="icon">🙆</div><h3>身體較緊</h3><p>肩頸、腰背、腿部較緊，想慢慢增加活動度。</p></article><article class="card"><div class="icon">🌿</div><h3>初學者</h3><p>沒有運動基礎也可以，循序漸進。</p></article><article class="card"><div class="icon">🤝</div><h3>一起養成習慣</h3><p>固定每週一起動，更容易養成習慣。</p></article></div></div></section>
+<section id="course"><div class="wrap"><div class="info"><h2>本期課程資訊</h2>
+<div class="info-grid compact-info">
+  <div class="info-item"><strong>上課日期</strong><span>8/18～10/27</span></div>
+  <div class="info-item"><strong>上課時間</strong><span>每週二<br>20:00～21:00</span></div>
+  <div class="info-item full"><strong>上課地點</strong><span>溪洲公園活動中心</span></div>
+  <div class="info-item full"><strong>地址</strong><span>板橋區溪崑二街 113 號</span></div>
+  <div class="info-item"><strong>課程費用</strong><span>300 元</span></div>
+  <div class="info-item"><strong>保證金</strong><span>200 元</span></div>
+</div><div class="note">請假 3 次（含）以內，期末退回保證金 200 元。</div>
 <div class="map-card">
   <div class="map-head">
     <div>
@@ -95,12 +267,27 @@
     title="溪洲公園活動中心 Google 地圖"></iframe>
 </div>
 </div></div></section>
-<section><div class="wrap"><div class="section-title"><h2>一堂課怎麼進行？</h2><p>簡單、穩定、循序漸進。</p></div><div class="steps"><article class="card step"><h3>暖身</h3><p>讓身體逐步進入活動狀態。</p></article><article class="card step"><h3>伸展</h3><p>依課程節奏進行全身拉筋與伸展。</p></article><article class="card step"><h3>活動練習</h3><p>配合帶領者示範，依個人狀況調整。</p></article><article class="card step"><h3>放鬆</h3><p>課程最後舒緩整理，輕鬆結束。</p></article></div></div></section>
+<section><div class="wrap"><div class="section-title"><h2>一堂課怎麼進行？</h2><p>簡單、穩定、循序漸進。</p></div><div class="steps compact-steps"><article class="card step"><h3>暖身</h3><p>逐步進入活動狀態。</p></article><article class="card step"><h3>伸展</h3><p>依節奏進行全身伸展。</p></article><article class="card step"><h3>活動練習</h3><p>配合示範，依個人狀況調整。</p></article><article class="card step"><h3>放鬆</h3><p>舒緩整理，輕鬆結束。</p></article></div></div></section>
 <section id="faq" class="faq"><div class="wrap"><div class="section-title"><h2>常見問題</h2></div><details open><summary>身體很硬，可以參加嗎？</summary><p>可以。不需要先有柔軟度，依自己的身體狀況慢慢練習即可。</p></details><details><summary>沒有運動基礎可以嗎？</summary><p>可以。課程歡迎初學者與平常較少運動的朋友。</p></details><details><summary>熟齡朋友適合嗎？</summary><p>歡迎熟齡朋友參加；如果有既有疾病、近期受傷或醫師限制活動的情況，請先詢問專業醫療人員，再依自身狀況參與。</p></details><details><summary>怎麼報名？</summary><p>可以直接電話聯絡王老師，或用 LINE ID：kingarthur626 洽詢。</p></details></div></section>
-<section id="contact"><div class="wrap contact"><h2>歡迎一起來動一動</h2><p>想了解課程、名額或第一次體驗，歡迎直接聯絡。</p><div class="contact-lines"><span>📞 王老師 0975-300365</span><span>🟢 LINE ID：kingarthur626</span></div><div class="actions" style="justify-content:center"><a class="btn primary" href="tel:0975300365">立即電話報名</a><a class="btn secondary" target="_blank" rel="noopener" href="https://line.me/ti/p/~kingarthur626">加入 LINE</a><a class="btn secondary" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=61593184050332">Facebook 粉絲專頁</a></div></div></section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <h2>歡迎一起來動一動</h2>
+    <p>想了解課程、名額或第一次體驗，歡迎直接聯絡。</p>
+    <div class="contact-lines">
+      <span>📞 王老師 0975-300365</span>
+      <span>🟢 LINE ID：kingarthur626</span>
+    </div>
+    <div class="actions" style="justify-content:center">
+      <a class="btn secondary" target="_blank" rel="noopener"
+         href="https://www.facebook.com/profile.php?id=61593184050332">Facebook 粉絲專頁</a>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer><div class="wrap">溪洲公園拉筋班｜舒活養生・健康伸展｜板橋・樹林</div></footer>
 <div class="floating"><a class="float-btn float-line" target="_blank" rel="noopener" href="https://line.me/ti/p/~kingarthur626">🟢 LINE 報名</a><a class="float-btn float-call" href="tel:0975300365">📞 打電話</a></div>
-<!-- 溪洲公園拉筋班網站 v1.0.5 -->
+<!-- 溪洲公園拉筋班網站 v1.0.6 -->
 </body>
 </html>
