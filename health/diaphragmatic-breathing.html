@@ -41,6 +41,70 @@ footer{text-align:center;color:var(--muted);padding:0 0 34px;font-size:14px}
   .result-item strong{font-size:15px}
 }
 
+
+/* v1.0.18 研究結果與資料來源閱讀優化 */
+.result-item{
+  justify-content:flex-start !important;
+  gap:12px !important;
+}
+.result-label{
+  min-width:auto !important;
+}
+.result-item strong{
+  margin-left:0 !important;
+}
+.sources h2{
+  font-size:24px;
+  margin-bottom:10px;
+}
+.sources ol{
+  padding-left:1.35em;
+  margin-top:8px;
+}
+.sources li{
+  font-size:14px;
+  line-height:1.6;
+  margin:8px 0 !important;
+  color:#5f5865;
+}
+.sources li em{
+  font-size:14px;
+}
+.sources li a{
+  display:inline;
+  margin-left:5px;
+  font-size:14px;
+  font-weight:800;
+}
+@media(max-width:520px){
+  .result-item{
+    gap:8px !important;
+    padding:11px 12px !important;
+  }
+  .result-label,
+  .result-item strong{
+    font-size:15px !important;
+  }
+  .sources h2{
+    font-size:21px;
+  }
+  .sources li,
+  .sources li em,
+  .sources li a{
+    font-size:12.5px;
+    line-height:1.5;
+  }
+  .sources ol{
+    padding-left:1.25em;
+  }
+  article{
+    margin-bottom:22px;
+  }
+  footer{
+    padding-bottom:18px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -93,9 +157,7 @@ footer{text-align:center;color:var(--muted);padding:0 0 34px;font-size:14px}
     <div class="result-item"><span class="result-label">心理壓力</span><strong>降低 ↓</strong></div>
   </div>
 
-  <p>這也是為什麼腹式呼吸常被放在伸展、放鬆或身心活動中一起練習。</p>
-
-  <h2>拉筋時，為什麼呼吸也重要？</h2>
+    <h2>拉筋時，為什麼呼吸也重要？</h2>
   <p>做伸展動作時，慢慢吸、慢慢吐，讓整個伸展過程更有節奏。</p>
   <p><strong>伸展身體，也練習呼吸與放鬆。</strong>這正是我們把腹式呼吸安排進課程裡的原因。</p>
 
@@ -110,6 +172,6 @@ footer{text-align:center;color:var(--muted);padding:0 0 34px;font-size:14px}
 </article>
 </main>
 
-<footer>溪洲公園拉筋班｜板橋・樹林在地健康伸展</footer>
+<footer>溪洲公園拉筋班｜板橋・樹林・新莊在地健康伸展</footer>
 </body>
 </html>
