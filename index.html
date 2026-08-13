@@ -267,7 +267,7 @@
     }
 
 
-    /* v1.0.21 手機版面壓縮 */
+    /* v1.0.22 手機版面壓縮 */
     .compact-head{
       display:flex;
       align-items:center;
@@ -331,7 +331,7 @@
     }
 
 
-/* v1.0.21 底部空白縮減 */
+/* v1.0.22 底部空白縮減 */
 footer{padding:18px 0 18px !important}
 @media(max-width:520px){
   body{padding-bottom:0 !important}
@@ -340,7 +340,7 @@ footer{padding:18px 0 18px !important}
 }
 
 
-/* v1.0.21 首頁上方版面調整 */
+/* v1.0.22 首頁上方版面調整 */
 .hero-grid{
   grid-template-columns:1fr !important;
   grid-template-areas:
@@ -542,6 +542,21 @@ footer{padding:18px 0 18px !important}
 </main>
 <footer><div class="wrap">溪洲公園拉筋班｜舒活養生・健康伸展｜板橋・樹林・新莊</div></footer>
 
-<!-- 溪洲公園拉筋班網站 v1.0.21 -->
+<!-- 溪洲公園拉筋班網站 v1.0.22 -->
+
+<script>
+(function () {
+  function cleanHomeUrl() {
+    if (location.hash || /\/index\.html$/i.test(location.pathname)) {
+      history.replaceState(null, "", "/");
+    }
+  }
+  window.addEventListener("load", cleanHomeUrl);
+  window.addEventListener("hashchange", function () {
+    setTimeout(cleanHomeUrl, 0);
+  });
+})();
+</script>
+
 </body>
 </html>
