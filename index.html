@@ -11,7 +11,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Microsoft JhengHei","PingFang TC",system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#fffaf7 0%,#fff 42%,#fff9fc 100%);color:var(--ink);line-height:1.75}a{color:inherit}.wrap{width:min(1100px,calc(100% - 32px));margin:auto}
     .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(255,255,255,.88);border-bottom:1px solid rgba(111,75,184,.10)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.brand-mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-weight:900;box-shadow:0 8px 20px rgba(111,75,184,.25)}.navlinks{display:flex;gap:18px;font-size:14px;font-weight:700;color:#5d5664}.navlinks a{text-decoration:none}
     .hero{padding:62px 0 36px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}.eyebrow{color:var(--brand);font-weight:900;letter-spacing:.08em}h1{font-size:clamp(38px,6vw,72px);line-height:1.06;margin:10px 0 18px;letter-spacing:-.04em;white-space:nowrap}h1 span{display:inline;color:var(--brand)}.lead{font-size:clamp(18px,2.2vw,23px);color:#544d59;max-width:760px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:999px;text-decoration:none;font-weight:900;border:1px solid transparent;transition:.2s ease}.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;box-shadow:0 10px 25px rgba(111,75,184,.24)}.btn.secondary{background:#fff;border-color:var(--line);color:var(--brand)}.btn:hover{transform:translateY(-1px)}
-    .hero-card{background:linear-gradient(145deg,#f6edff,#fff2f7);border:1px solid var(--line);border-radius:32px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(212,91,154,.12);right:-60px;top:-60px}.hero-badge{display:inline-block;padding:7px 12px;border-radius:999px;background:#fff;color:var(--brand);font-weight:900;border:1px solid var(--line);font-size:14px}.hero-card h2{font-size:30px;margin:18px 0 8px}.hero-card .big{font-size:22px;font-weight:900;color:#3c3550;margin-top:14px}.hero-card ul{padding-left:1.2em;margin:10px 0 0}
+    .hero-card{background:linear-gradient(145deg,#f6edff,#fff2f7);border:1px solid var(--line);border-radius:32px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(212,91,154,.12);right:-60px;top:-60px}.hero-badge{display:inline-block;padding:7px 12px;border-radius:999px;background:#fff;color:var(--brand);font-weight:900;border:1px solid var(--line);font-size:14px}.hero-card h2{font-size:30px;margin:18px 0 8px;line-height:1.35}.hero-card .inline-time{display:inline-block;font-size:.86em;color:#4a4162;margin-left:10px;font-weight:900}.hero-card .big{font-size:22px;font-weight:900;color:#3c3550;margin-top:14px}.hero-card ul{padding-left:1.2em;margin:10px 0 0}
     section{padding:34px 0}.section-title{text-align:center;margin-bottom:24px}.section-title h2{font-size:clamp(28px,4vw,42px);margin:0 0 8px}.section-title p{margin:0;color:var(--muted)}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 8px 30px rgba(68,45,88,.06)}.icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:25px;background:var(--soft);margin-bottom:12px}.card h3{margin:0 0 6px;font-size:20px}.card p{margin:0;color:var(--muted)}
     .info{background:linear-gradient(135deg,#6f4bb8,#8d56c8 50%,#d45b9a);color:#fff;border-radius:32px;padding:30px;box-shadow:var(--shadow)}.info h2{margin:0 0 18px;font-size:34px}.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.info-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:16px}.info-item strong{display:block;font-size:14px;opacity:.85}.info-item span{display:block;font-size:20px;font-weight:900;margin-top:4px}.note{margin-top:18px;background:#fff7d9;color:#66531c;border:1px solid #f2df9b;border-radius:18px;padding:16px 18px;font-weight:700}
 
@@ -30,7 +30,7 @@
     .map-head span{color:var(--muted);font-size:14px}
     .map-frame{width:100%;height:360px;border:0;display:block}
     .steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step:before{counter-increment:step;content:counter(step);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:900;margin-bottom:12px}.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:10px}.faq summary{font-weight:900;cursor:pointer}.faq p{margin:10px 0 0;color:var(--muted)}
-    .contact{text-align:center;background:linear-gradient(145deg,#fff1f7,#f5efff);border:1px solid var(--line);border-radius:32px;padding:34px 20px}.contact h2{font-size:38px;margin:0 0 8px}.contact p{color:var(--muted)}.contact-lines{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 16px;margin:16px 0;font-weight:900}footer{padding:32px 0 32px;color:#756d79;text-align:center;font-size:14px}
+    .knowledge-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:stretch}.article-card{background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 10px 34px rgba(68,45,88,.08)}.article-card img{width:100%;height:100%;min-height:320px;object-fit:cover;display:block}.article-body{padding:24px}.article-kicker{display:inline-block;padding:7px 12px;border-radius:999px;background:var(--soft);color:var(--brand);font-weight:900;font-size:14px}.article-body h3{font-size:28px;line-height:1.35;margin:14px 0 10px}.article-body p{margin:0 0 12px;color:var(--muted)}.article-points{margin:0;padding-left:1.2em;color:#4b4453}.article-points li{margin:6px 0}.source{margin-top:14px;font-size:13px;color:#7a7380}.mini-note{margin-top:10px;font-size:13px;color:#7a7380}.contact{text-align:center;background:linear-gradient(145deg,#fff1f7,#f5efff);border:1px solid var(--line);border-radius:32px;padding:34px 20px}.contact h2{font-size:38px;margin:0 0 8px}.contact p{color:var(--muted)}.contact-lines{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 16px;margin:16px 0;font-weight:900}footer{padding:32px 0 32px;color:#756d79;text-align:center;font-size:14px}
     @media(max-width:800px){.gallery-grid{grid-template-columns:1fr}.photo-main img{min-height:0;height:auto}.photo-stack{grid-template-columns:1fr 1fr}.photo-stack .photo-card img{height:220px}.navlinks{display:none}.hero{padding-top:34px}.hero-grid{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}}@media(max-width:520px){.photo-stack{grid-template-columns:1fr}.photo-stack .photo-card img{height:auto}.map-frame{height:300px}.wrap{width:min(100% - 22px,1100px)}.grid-4,.steps{grid-template-columns:1fr}h1{font-size:42px}.hero-card{padding:22px}.contact h2{font-size:30px}.floating{left:11px;right:11px;bottom:10px;flex-direction:row}.float-btn{flex:1;min-width:0}footer{padding-bottom:84px}}
   
     /* v1.0.6 手機精簡版 */
@@ -101,6 +101,7 @@
       .grid-4.compact-grid{grid-template-columns:repeat(2,1fr)}
       .steps.compact-steps{grid-template-columns:repeat(2,1fr)}
       .info-grid.compact-info{grid-template-columns:repeat(2,1fr)}
+      .knowledge-wrap{grid-template-columns:1fr}
       .info-grid.compact-info .full{grid-column:1 / -1}
       .card{padding:18px}
       .info{padding:24px}
@@ -113,7 +114,7 @@
       .hero-grid{gap:16px}
       .lead{font-size:18px;line-height:1.7}
       .hero-card{padding:20px;border-radius:24px}
-      .hero-card h2{font-size:27px}
+      .hero-card h2{font-size:25px}.hero-card .inline-time{display:inline;font-size:.78em;margin-left:6px}
       .hero-photo .photo-caption{padding:12px 14px}
       .hero-photo .photo-caption p{font-size:14px}
 
@@ -145,6 +146,11 @@
       .compact-steps .step:before{width:34px;height:34px}
       .compact-steps h3{font-size:18px}
       .compact-steps p{font-size:14px;line-height:1.55}
+
+      .knowledge-wrap{grid-template-columns:1fr;gap:14px}
+      .article-card img{min-height:220px}
+      .article-body{padding:18px}
+      .article-body h3{font-size:23px}
 
       .contact{padding:26px 16px}
       
@@ -271,7 +277,7 @@
   </div>
 </div>
 </div>
-<nav class="navlinks"><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
+<nav class="navlinks"><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#knowledge">健康文章</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
 <main>
 
 <section class="hero">
@@ -295,8 +301,7 @@
 
       <aside class="hero-card">
         <span class="hero-badge">課程摘要</span>
-        <h2>每週二晚上</h2>
-        <div class="big">20:00～21:00</div>
+        <h2>每週二晚上 <span class="inline-time">20:00～21:00</span></h2>
         <ul>
           <li>上課日期：8/18～10/27</li>
           <li>溪洲公園活動中心</li>
@@ -367,6 +372,34 @@
 </div>
 </div></div></section>
 <section><div class="wrap"><div class="section-title"><h2>一堂課怎麼進行？</h2><p>簡單、穩定、循序漸進。</p></div><div class="steps compact-steps"><article class="card step"><h3>暖身</h3><p>逐步進入活動狀態。</p></article><article class="card step"><h3>伸展</h3><p>依節奏進行全身伸展。</p></article><article class="card step"><h3>活動練習</h3><p>配合示範，依個人狀況調整。</p></article><article class="card step"><h3>放鬆</h3><p>舒緩整理，輕鬆結束。</p></article></div></div></section>
+<section id="knowledge">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>健康小知識</h2>
+      <p>課堂中的腹式呼吸練習，也可以延伸成日常的放鬆練習。</p>
+    </div>
+    <div class="knowledge-wrap">
+      <article class="article-card">
+        <img loading="lazy" decoding="async" src="images/breathing-post.png" alt="學員坐姿練習腹式呼吸，一手放胸口、一手放腹部，慢慢吸氣、慢慢吐氣">
+      </article>
+      <article class="article-card">
+        <div class="article-body">
+          <span class="article-kicker">第一篇</span>
+          <h3>腹式呼吸：慢慢吸、慢慢吐，讓身心慢慢放鬆</h3>
+          <p>拉筋班上課時，我們會帶大家做腹式呼吸，也就是橫膈膜呼吸。練習時，一手放胸口、一手放腹部，感受吸氣時腹部微微鼓起，吐氣時慢慢回到自然狀態，讓呼吸節奏穩定下來。</p>
+          <ul class="article-points">
+            <li>適合在伸展前先讓身體慢慢安定下來。</li>
+            <li>重點不是用力吸，而是放慢節奏、自然呼吸。</li>
+            <li>規律的慢速腹式呼吸練習，可能有助於放鬆與壓力調節。</li>
+          </ul>
+          <p class="source">📖 健康知識分享　資料來源：Ma X. et al., <em>Frontiers in Psychology</em>, 2017</p>
+          <p class="mini-note">這也是我們課堂中的練習之一，從呼吸開始，讓身體更容易進入伸展狀態。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="faq" class="faq"><div class="wrap"><div class="section-title"><h2>常見問題</h2></div><details open><summary>身體很硬，可以參加嗎？</summary><p>可以。不需要先有柔軟度，依自己的身體狀況慢慢練習即可。</p></details><details><summary>沒有運動基礎可以嗎？</summary><p>可以。課程歡迎初學者與平常較少運動的朋友。</p></details><details><summary>熟齡朋友適合嗎？</summary><p>歡迎熟齡朋友參加；如果有既有疾病、近期受傷或醫師限制活動的情況，請先詢問專業醫療人員，再依自身狀況參與。</p></details><details><summary>怎麼報名？</summary><p>可以直接電話聯絡王老師，或用 LINE ID：kingarthur626 洽詢。</p></details></div></section>
 
 <section id="contact">
@@ -390,6 +423,6 @@
 </main>
 <footer><div class="wrap">溪洲公園拉筋班｜舒活養生・健康伸展｜板橋・樹林</div></footer>
 
-<!-- 溪洲公園拉筋班網站 v1.0.14 -->
+<!-- 溪洲公園拉筋班網站 v1.0.15 -->
 </body>
 </html>
