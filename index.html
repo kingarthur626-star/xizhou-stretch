@@ -380,6 +380,17 @@ footer{padding:18px 0 18px !important}
   }
 }
 
+
+/* v1.0.23 最新開課紀錄 */
+.latest-record{padding:18px 0 38px}
+.latest-card{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 14px 38px rgba(68,45,88,.08)}
+.latest-photo-frame{padding:9px;border:2px solid #d8c5ee;border-radius:24px;background:linear-gradient(135deg,#faf5ff,#fff8fc);box-shadow:0 10px 28px rgba(111,75,184,.10)}
+.latest-photo-frame img{display:block;width:100%;height:auto;border-radius:17px}
+.latest-kicker{display:inline-block;color:var(--brand);font-weight:900;letter-spacing:.04em;margin-bottom:6px}
+.latest-copy h2{font-size:clamp(28px,3.6vw,42px);line-height:1.3;margin:4px 0 12px}
+.latest-copy p{color:var(--muted);margin:0 0 12px}
+.latest-flow{font-weight:900;color:#5a3e8a;margin:14px 0}
+@media(max-width:800px){.latest-card{grid-template-columns:1fr;padding:16px;gap:16px}.latest-record{padding-top:8px}.latest-copy h2{font-size:30px}}
 </style>
 </head>
 <body>
@@ -391,7 +402,7 @@ footer{padding:18px 0 18px !important}
   </div>
 </div>
 </div>
-<nav class="navlinks"><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#knowledge">健康文章</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
+<nav class="navlinks"><a href="#latest">開課紀錄</a><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#knowledge">健康文章</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
 <main>
 
 <section class="hero">
@@ -417,6 +428,24 @@ footer{padding:18px 0 18px !important}
 </section>
 
 
+
+
+<section id="latest" class="latest-record">
+  <div class="wrap">
+    <div class="latest-card">
+      <div class="latest-photo-frame">
+        <img loading="lazy" decoding="async" src="images/opening-group.webp" alt="溪洲公園拉筋班 2026 年 8 月 18 日新一期第一堂課團體合照">
+      </div>
+      <div class="latest-copy">
+        <span class="latest-kicker">2026/08/18｜開課紀錄</span>
+        <h2>新一期開課｜一起暖身、伸展、放鬆</h2>
+        <p>第一堂課有幾位第一次參加的新同學。大家先從暖身開始，熟悉上課節奏，再慢慢進入全身伸展，最後以舒緩放鬆作為結束。</p>
+        <div class="latest-flow">暖身 → 伸展 → 放鬆</div>
+        <a class="btn secondary" href="news/2026-08-18-new-term.html">看完整開課紀錄 →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="gallery">
   <div class="wrap">
@@ -542,7 +571,7 @@ footer{padding:18px 0 18px !important}
 </main>
 <footer><div class="wrap">溪洲公園拉筋班｜舒活養生・健康伸展｜板橋・樹林・新莊</div></footer>
 
-<!-- 溪洲公園拉筋班網站 v1.0.22 -->
+<!-- 溪洲公園拉筋班網站 v1.0.23 -->
 
 <script>
 (function () {
