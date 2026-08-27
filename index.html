@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="溪洲公園拉筋班｜板橋・樹林在地舒活養生、健康伸展課程。每週二晚上 8:00～9:00，初學者、熟齡朋友都歡迎。">
+  <link rel="canonical" href="https://stretch.cdv.tw/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="溪洲公園拉筋班｜舒活養生・健康伸展">
+  <meta property="og:description" content="每週二晚上 8:00～9:00，在溪洲公園活動中心一起舒活伸展。初學者、熟齡朋友都歡迎。">
+  <meta property="og:url" content="https://stretch.cdv.tw/">
+  <meta property="og:image" content="https://stretch.cdv.tw/images/breathing-practice.jpg">
   <meta name="theme-color" content="#6f4bb8">
   <title>溪洲公園拉筋班｜舒活養生・健康伸展</title>
   <style>
@@ -391,16 +397,22 @@ footer{padding:18px 0 18px !important}
 .latest-copy p{color:var(--muted);margin:0 0 12px}
 .latest-flow{font-weight:900;color:#5a3e8a;margin:14px 0}
 @media(max-width:800px){.latest-card{grid-template-columns:1fr;padding:16px;gap:16px}.latest-record{padding-top:8px}.latest-copy h2{font-size:30px}}
+
+/* v1.0.28 報名動線與手機版面 */
+.slogan{min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:800;color:#554d60}
+.hero-actions{justify-content:center;margin-top:22px}
+.quick-course{padding:10px 0 28px}
+.quick-course-card{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;background:linear-gradient(135deg,#f5efff,#fff3f8);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:0 12px 32px rgba(68,45,88,.08)}
+.quick-course-card h2{font-size:30px;margin:0 0 8px}.quick-course-card p{margin:0;color:var(--muted)}
+.quick-course-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick-course-fact{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-weight:900}.quick-course-fact small{display:block;color:var(--muted);font-size:12px;margin-bottom:2px}
+.mobile-cta{display:none}
+@media(max-width:800px){.quick-course-card{grid-template-columns:1fr}.quick-course-card .actions{margin-top:16px}.quick-course-facts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){body{padding-bottom:76px !important}.slogan{font-size:14px}.quick-course{padding:6px 0 24px}.quick-course-card{padding:20px;border-radius:24px}.quick-course-card h2{font-size:26px}.quick-course-facts{grid-template-columns:1fr 1fr;gap:8px}.quick-course-fact{padding:11px 12px;font-size:15px}.mobile-cta{position:fixed;left:10px;right:10px;bottom:10px;z-index:70;display:grid;grid-template-columns:1.15fr .85fr;gap:8px;padding:8px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 28px rgba(68,45,88,.18)}.mobile-cta a{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:13px;text-decoration:none;font-weight:900}.mobile-cta .line-link{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}.mobile-cta .course-link{background:#fff;color:var(--brand);border:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav"><div class="brand"><div class="brand-mark">健康</div>
-<div class="slogan-marquee" aria-label="古人重視筋骨養生，常言：『筋長一吋，壽延十年；筋縮則亡，筋柔則康。』《黃帝內經》亦云：『骨正筋柔，氣血以流。』　　修行有十養：自在自然，所以養道；無為無用，所以養性；虛無靜篤，所以養神；清靜恬淡，所以養心；蹈仁覆義，所以養德；無忮無求，所以養品；守中守一，所以養氣；知足知止，所以養身；無思無念，所以養生；清心寡慾，所以養精。">
-  <div class="slogan-track" aria-hidden="true">
-    <span>古人重視筋骨養生，常言：『筋長一吋，壽延十年；筋縮則亡，筋柔則康。』《黃帝內經》亦云：『骨正筋柔，氣血以流。』　　修行有十養：自在自然，所以養道；無為無用，所以養性；虛無靜篤，所以養神；清靜恬淡，所以養心；蹈仁覆義，所以養德；無忮無求，所以養品；守中守一，所以養氣；知足知止，所以養身；無思無念，所以養生；清心寡慾，所以養精。</span>
-    <span>古人重視筋骨養生，常言：『筋長一吋，壽延十年；筋縮則亡，筋柔則康。』《黃帝內經》亦云：『骨正筋柔，氣血以流。』　　修行有十養：自在自然，所以養道；無為無用，所以養性；虛無靜篤，所以養神；清靜恬淡，所以養心；蹈仁覆義，所以養德；無忮無求，所以養品；守中守一，所以養氣；知足知止，所以養身；無思無念，所以養生；清心寡慾，所以養精。</span>
-  </div>
-</div>
+<div class="slogan">每週二晚上｜溪洲公園活動中心</div>
 </div>
 <nav class="navlinks"><a href="#latest">開課紀錄</a><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#knowledge">健康文章</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
 <main>
@@ -412,11 +424,15 @@ footer{padding:18px 0 18px !important}
         <div class="eyebrow">板橋・樹林在地健康伸展</div>
         <h1>溪洲公園 <span>拉筋班</span></h1>
         <p class="lead">舒活養生・健康伸展。每週一起伸展、活動身體，不比柔軟度，依自己的狀況循序漸進，養成固定運動的好習慣。</p>
+        <div class="actions hero-actions">
+          <a class="btn primary" href="https://line.me/ti/p/~kingarthur626" target="_blank" rel="noopener">🟢 LINE 報名</a>
+          <a class="btn secondary" href="#course">查看本期課程</a>
+        </div>
       </div>
 
       <div class="hero-photo">
         <img loading="eager" decoding="async"
-             src="images/class-group-stretch.webp"
+             src="images/opening-class-overhead.webp"
              alt="溪洲公園拉筋班實際上課，學員一起進行伸展練習">
         <div class="photo-caption">
           <h3>真實上課實景</h3>
@@ -427,6 +443,26 @@ footer{padding:18px 0 18px !important}
   </div>
 </section>
 
+
+<section id="course" class="quick-course">
+  <div class="wrap">
+    <div class="quick-course-card">
+      <div>
+        <h2>本期課程資訊</h2>
+        <p>每週留一個小時，和大家一起暖身、伸展、放鬆。</p>
+        <div class="actions">
+          <a class="btn primary" href="https://line.me/ti/p/~kingarthur626" target="_blank" rel="noopener">🟢 LINE 報名</a>
+          <a class="btn secondary" href="#course-details">查看完整資訊</a>
+        </div>
+      </div>
+      <div class="quick-course-facts">
+        <div class="quick-course-fact"><small>上課時間</small>每週二 20:00–21:00</div>
+        <div class="quick-course-fact"><small>上課地點</small>溪洲公園活動中心</div>
+        <div class="quick-course-fact"><small>課程費用</small>300 元</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -456,7 +492,7 @@ footer{padding:18px 0 18px !important}
     <div class="gallery-grid">
       <article class="photo-card">
         <img loading="lazy" decoding="async"
-             src="images/instructor-demo.webp"
+             src="images/opening-instructor.webp"
              alt="溪洲公園拉筋班老師示範動作">
         <div class="photo-caption">
           <h3>老師示範帶領</h3>
@@ -466,7 +502,7 @@ footer{padding:18px 0 18px !important}
 
       <article class="photo-card">
         <img loading="lazy" decoding="async"
-             src="images/class-core-training.webp"
+             src="images/opening-forward-bend.webp"
              alt="溪洲公園拉筋班核心穩定練習">
         <div class="photo-caption">
           <h3>核心與穩定練習</h3>
@@ -478,7 +514,7 @@ footer{padding:18px 0 18px !important}
 </section>
 
 <section id="about"><div class="wrap"><div class="section-title"><h2>適合想開始動一動的你</h2><p>不用本來就很柔軟，重點是找到適合自己的節奏。</p></div><div class="grid-4 compact-grid"><article class="card"><div class="compact-head"><div class="icon">🪑</div><h3>久坐久站</h3></div><p>想固定安排時間，讓身體多活動。</p></article><article class="card"><div class="compact-head"><div class="icon">🙆</div><h3>身體較緊</h3></div><p>肩頸、腰背、腿部較緊，想慢慢增加活動度。</p></article><article class="card"><div class="compact-head"><div class="icon">🌿</div><h3>初學者</h3></div><p>沒有運動基礎也可以，循序漸進。</p></article><article class="card"><div class="compact-head"><div class="icon">🤝</div><h3>一起養成習慣</h3></div><p>固定每週一起動，更容易養成習慣。</p></article></div></div></section>
-<section id="course"><div class="wrap"><div class="info"><h2>本期課程資訊</h2>
+<section id="course-details"><div class="wrap"><div class="info"><h2>本期課程完整資訊</h2>
 <div class="info-grid compact-info">
   <div class="info-item"><strong>上課日期</strong><span>8/18～10/27</span></div>
   <div class="info-item time-item"><strong>上課時間</strong><span>每週二　20:00～21:00</span></div>
@@ -525,13 +561,13 @@ footer{padding:18px 0 18px !important}
   <div class="wrap">
     <div class="section-title">
       <h2>健康小知識</h2>
-      <p>課堂中的呼吸與伸展，也可以延伸成日常健康知識。</p>
+      <p>課堂中的呼吸與伸展，也可以延伸成日常健康知識；內容整理自國際研究與健康機構資料。</p>
     </div>
     <div class="knowledge-wrap">
       <article class="article-card">
         <img loading="lazy" decoding="async"
-             src="images/breathing-post.png"
-             alt="坐姿練習腹式呼吸，一手放胸口、一手放腹部，慢慢吸氣、慢慢吐氣">
+             src="images/breathing-practice.jpg"
+             alt="溪洲公園拉筋班學員一起進行課堂練習">
       </article>
       <article class="article-card">
         <div class="article-body">
@@ -569,9 +605,13 @@ footer{padding:18px 0 18px !important}
 </section>
 
 </main>
+<div class="mobile-cta" aria-label="快速報名">
+  <a class="line-link" href="https://line.me/ti/p/~kingarthur626" target="_blank" rel="noopener">🟢 LINE 報名</a>
+  <a class="course-link" href="#course">課程資訊</a>
+</div>
 <footer><div class="wrap">溪洲公園拉筋班｜舒活養生・健康伸展｜板橋・樹林・新莊</div></footer>
 
-<!-- 溪洲公園拉筋班網站 v1.0.24 -->
+<!-- 溪洲公園拉筋班網站 v1.0.23 -->
 
 <script>
 (function () {
@@ -589,3 +629,4 @@ footer{padding:18px 0 18px !important}
 
 </body>
 </html>
+
