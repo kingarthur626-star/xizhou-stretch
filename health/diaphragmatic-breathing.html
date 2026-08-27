@@ -17,7 +17,7 @@
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif; line-height:1.8; }
     a { color:var(--leaf-dark); }
     .site-header { background:#fff; border-bottom:1px solid var(--line); }
-    .wrap { width:min(920px, calc(100% - 40px)); margin:0 auto; }
+    .wrap { width:100%; max-width:920px; margin:0 auto; padding:0 20px; }
     .topbar { min-height:70px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .brand { color:var(--ink); font-weight:800; text-decoration:none; font-size:1.08rem; }
     .back { color:var(--leaf-dark); font-weight:700; text-decoration:none; }
@@ -41,7 +41,7 @@
     .btn.primary { color:#fff; background:var(--leaf); }
     .btn.secondary { color:var(--leaf-dark); border:1px solid var(--leaf); background:#fff; }
     footer { padding:24px 0; color:var(--muted); text-align:center; border-top:1px solid var(--line); font-size:.92rem; }
-    @media (max-width:600px) { .wrap { width:100%; padding:0 20px; } .topbar { min-height:60px; } main { padding:38px 0 52px; } .hero-image { margin:24px 0 34px; } .research { padding:20px; } }
+    @media (max-width:600px) { .topbar { min-height:60px; } main { padding:38px 0 52px; } .hero-image { margin:24px 0 34px; } .research { padding:20px; } }
   </style>
 </head>
 <body>
