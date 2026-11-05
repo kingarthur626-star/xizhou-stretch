@@ -409,13 +409,54 @@ footer{padding:18px 0 18px !important}
 @media(max-width:800px){.quick-course-card{grid-template-columns:1fr}.quick-course-card .actions{margin-top:16px}.quick-course-facts{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:520px){body{padding-bottom:76px !important}.slogan{font-size:14px}.quick-course{padding:6px 0 24px}.quick-course-card{padding:20px;border-radius:24px}.quick-course-card h2{font-size:26px}.quick-course-facts{grid-template-columns:1fr 1fr;gap:8px}.quick-course-fact{padding:11px 12px;font-size:15px}.mobile-cta{position:fixed;left:10px;right:10px;bottom:10px;z-index:70;display:grid;grid-template-columns:1.15fr .85fr;gap:8px;padding:8px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 28px rgba(68,45,88,.18)}.mobile-cta a{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:13px;text-decoration:none;font-weight:900}.mobile-cta .line-link{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}.mobile-cta .course-link{background:#fff;color:var(--brand);border:1px solid var(--line)}}
 </style>
+
+<style id="blogger-news-style">
+[data-blogger-news] [data-news-item][hidden],[data-blogger-news] [data-news-controls][hidden]{display:none!important}
+.news-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.news-heading h2{font-size:clamp(28px,4vw,42px);line-height:1.25;margin:0}
+.latest-copy h3{font-size:clamp(28px,3.6vw,42px);line-height:1.3;margin:4px 0 12px}
+.latest-photo-frame img{width:100%;height:310px;object-fit:cover}
+.xzc-news-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:14px}
+.xzc-news-arrow{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--brand);font-size:22px;font-weight:900;cursor:pointer}
+.xzc-news-dots{display:flex;align-items:center;justify-content:center;gap:2px;flex-wrap:wrap}
+.xzc-news-dot{width:32px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;position:relative}
+.xzc-news-dot:before{content:"";display:block;width:10px;height:10px;margin:auto;border-radius:50%;background:#d8cbe5}
+.xzc-news-dot.is-active:before{width:26px;border-radius:999px;background:var(--brand)}
+[data-blogger-news] button:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+@media(max-width:520px){.news-heading{align-items:flex-start;flex-direction:column}.latest-copy h3{font-size:27px}.latest-photo-frame img{height:210px}}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav"><div class="brand"><div class="brand-mark">健康</div>
 <div class="slogan">每週二晚上｜溪洲公園活動中心</div>
 </div>
-<nav class="navlinks"><a href="#latest">開課記錄</a><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#knowledge">健康文章</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
+<nav class="navlinks"><a href="#latest">新鮮事</a><a href="#gallery">上課實景</a><a href="#about">課程特色</a><a href="#course">本期資訊</a><a href="#knowledge">健康文章</a><a href="#faq">常見問題</a><a href="#contact">報名</a></nav></div></header>
 <main>
+
+<section id="latest" class="latest-record" data-blogger-news data-news-interval="5000" aria-label="拉筋班新鮮事文章輪播" aria-roledescription="輪播">
+  <div class="wrap">
+    <div class="news-heading"><h2>拉筋班新鮮事</h2><a class="btn secondary" href="https://xizhou-stretch-class-2026.blogspot.com/search?max-results=20">查看全部文章 →</a></div>
+    <div data-news-track aria-live="polite">
+    <div class="latest-card is-active" data-news-item aria-hidden="false">
+      <div class="latest-photo-frame">
+        <img data-news-image loading="eager" decoding="async" src="images/opening-group.webp" alt="溪洲公園拉筋班 2026 年 8 月 18 日新一期第一堂課團體合照">
+      </div>
+      <div class="latest-copy">
+        <span class="latest-kicker" data-news-date>2026/08/18｜拉筋班新鮮事</span>
+        <h3 data-news-title>新一期開課｜一起暖身、伸展、放鬆</h3>
+        <p data-news-summary>第一堂課有幾位第一次參加的新同學。大家先從暖身開始，熟悉上課節奏，再慢慢進入全身伸展，最後以舒緩放鬆作為結束。</p>
+        <div class="latest-flow" data-news-fallback-only>暖身 → 伸展 → 放鬆</div>
+        <a class="btn secondary" data-news-link href="news/2026-08-18-new-term.html">閱讀完整文章 →</a>
+      </div>
+    </div>
+    </div>
+    <div class="xzc-news-controls" data-news-controls hidden>
+      <button class="xzc-news-arrow" data-news-prev type="button" aria-label="上一篇文章">‹</button>
+      <div class="xzc-news-dots" data-news-dots aria-label="選擇文章"></div>
+      <button class="xzc-news-arrow" data-news-next type="button" aria-label="下一篇文章">›</button>
+    </div>
+  </div>
+</section>
 
 <section class="hero">
   <div class="wrap">
@@ -466,22 +507,7 @@ footer{padding:18px 0 18px !important}
 
 
 
-<section id="latest" class="latest-record">
-  <div class="wrap">
-    <div class="latest-card">
-      <div class="latest-photo-frame">
-        <img loading="lazy" decoding="async" src="images/opening-group.webp" alt="溪洲公園拉筋班 2026 年 8 月 18 日新一期第一堂課團體合照">
-      </div>
-      <div class="latest-copy">
-        <span class="latest-kicker">2026/08/18｜開課紀錄</span>
-        <h2>新一期開課｜一起暖身、伸展、放鬆</h2>
-        <p>第一堂課有幾位第一次參加的新同學。大家先從暖身開始，熟悉上課節奏，再慢慢進入全身伸展，最後以舒緩放鬆作為結束。</p>
-        <div class="latest-flow">暖身 → 伸展 → 放鬆</div>
-        <a class="btn secondary" href="news/2026-08-18-new-term.html">看完整開課紀錄 →</a>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section id="gallery">
   <div class="wrap">
@@ -627,6 +653,156 @@ footer{padding:18px 0 18px !important}
 })();
 </script>
 
+<script id="blogger-news-script">
+/* 共用 Blogger 新鮮事：可直接內嵌於正式首頁或 Blogger 首頁。 */
+(function (global) {
+  'use strict';
+  var doc = global.document;
+  var excludedIds = ['5903054762842566575', '5181931037898282362'];
+  var feedBase = 'https://xizhou-stretch-class-2026.blogspot.com/feeds/posts/default';
+  var sequence = 0;
+
+  function safeUrl(value) {
+    try { var url = new URL(value); return /^https?:$/.test(url.protocol) ? url.href : ''; }
+    catch (error) { return ''; }
+  }
+  function articleLink(entry) {
+    var link = (entry.link || []).find(function (item) { return item.rel === 'alternate' && safeUrl(item.href); });
+    return link ? safeUrl(link.href) : '';
+  }
+  function selectEntries(data) {
+    var entries = data && data.feed && Array.isArray(data.feed.entry) ? data.feed.entry : [];
+    return entries.filter(function (entry) {
+      if (!entry || !entry.id || !entry.id.$t || !entry.title || !entry.title.$t || !entry.published) { return false; }
+      var id = entry.id.$t.split('.post-').pop();
+      return excludedIds.indexOf(id) === -1 && Number.isFinite(Date.parse(entry.published.$t)) && articleLink(entry);
+    }).sort(function (a, b) { return Date.parse(b.published.$t) - Date.parse(a.published.$t); }).slice(0, 8);
+  }
+  function contentBox(entry) {
+    var box = doc.createElement('div');
+    box.innerHTML = (entry.content && entry.content.$t) || (entry.summary && entry.summary.$t) || '';
+    Array.prototype.forEach.call(box.querySelectorAll('style,script,header,nav,footer'), function (node) { node.remove(); });
+    return box;
+  }
+  function dateLabel(value) {
+    return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(value)) + '｜拉筋班新鮮事';
+  }
+  function init(root) {
+    if (root.__xzcNewsReady) { return; }
+    var track = root.querySelector('[data-news-track]');
+    var original = track && track.querySelector('[data-news-item]');
+    if (!original) { return; }
+    root.__xzcNewsReady = true;
+    var template = original.cloneNode(true);
+    var fallbackImage = template.querySelector('[data-news-image]');
+    fallbackImage = fallbackImage ? fallbackImage.src : '';
+    var controls = root.querySelector('[data-news-controls]');
+    var dots = root.querySelector('[data-news-dots]');
+    var slides = [original];
+    var current = 0;
+    var timer = null;
+    var focused = false;
+    var hovered = false;
+    var reducedMotion = global.matchMedia && global.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var interval = Math.max(5000, parseInt(root.getAttribute('data-news-interval'), 10) || 5000);
+
+    function stop() { if (timer !== null) { global.clearInterval(timer); timer = null; } track.setAttribute('aria-live', 'polite'); }
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (slide, i) {
+        slide.hidden = i !== current;
+        slide.classList.toggle('is-active', i === current);
+        slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
+      if (dots) { Array.prototype.forEach.call(dots.querySelectorAll('button'), function (dot, i) { dot.classList.toggle('is-active', i === current); dot.setAttribute('aria-current', i === current ? 'true' : 'false'); }); }
+    }
+    function start() {
+      stop();
+      if (slides.length < 2 || focused || hovered || doc.hidden || reducedMotion) { return; }
+      track.setAttribute('aria-live', 'off');
+      timer = global.setInterval(function () { show(current + 1); }, interval);
+    }
+    function move(amount) { show(current + amount); start(); }
+    var previous = root.querySelector('[data-news-prev]');
+    var next = root.querySelector('[data-news-next]');
+    if (previous) { previous.addEventListener('click', function () { move(-1); }); }
+    if (next) { next.addEventListener('click', function () { move(1); }); }
+    root.addEventListener('focusin', function () { focused = true; stop(); });
+    root.addEventListener('focusout', function () { global.setTimeout(function () { focused = root.contains(doc.activeElement); start(); }, 0); });
+    root.addEventListener('mouseenter', function () { hovered = true; stop(); });
+    root.addEventListener('mouseleave', function () { hovered = false; start(); });
+    doc.addEventListener('visibilitychange', start);
+
+    function makeCard(entry, index) {
+      var card = template.cloneNode(true);
+      var box = contentBox(entry);
+      var paragraph = box.querySelector('.lead') || box.querySelector('p') || box;
+      var summary = (paragraph.textContent || '').replace(/\s+/g, ' ').trim();
+      card.querySelector('[data-news-title]').textContent = entry.title.$t;
+      card.querySelector('[data-news-date]').textContent = dateLabel(entry.published.$t);
+      card.querySelector('[data-news-summary]').textContent = summary.length > 150 ? summary.slice(0, 150) + '…' : summary;
+      var link = card.querySelector('[data-news-link]'); link.href = articleLink(entry); link.textContent = '閱讀完整文章 →';
+      Array.prototype.forEach.call(card.querySelectorAll('[data-news-fallback-only]'), function (node) { node.remove(); });
+      var image = card.querySelector('[data-news-image]');
+      if (image) {
+        var bodyImage = box.querySelector('img');
+        var thumbnail = entry.media$thumbnail && entry.media$thumbnail.url;
+        image.src = safeUrl(bodyImage && bodyImage.getAttribute('src')) || safeUrl(thumbnail && thumbnail.replace(/\/s72-c\//, '/s800/').replace(/=s72-c(?=$|[&])/, '=s800')) || fallbackImage;
+        image.alt = entry.title.$t + '文章圖片';
+        image.loading = index === 0 ? 'eager' : 'lazy';
+        image.onerror = function () { image.onerror = null; image.src = fallbackImage; };
+      }
+      return card;
+    }
+    if (controls) { controls.hidden = true; }
+    show(0);
+    var callbackName = 'xzcBloggerNewsFeed' + (++sequence);
+    var script = doc.createElement('script');
+    var settled = false;
+    var timeout;
+    function cleanup() {
+      settled = true;
+      global.clearTimeout(timeout);
+      script.remove();
+      global[callbackName] = function () {};
+    }
+    global[callbackName] = function (data) {
+      if (settled) { return; }
+      try {
+        var entries = selectEntries(data);
+        if (entries.length) {
+          var cards = entries.map(makeCard);
+          // 所有卡片準備成功才替換，失敗時保留原本完整開課卡。
+          stop();
+          track.replaceChildren.apply(track, cards);
+          slides = cards;
+          if (dots) {
+            dots.textContent = '';
+            cards.forEach(function (card, index) {
+              var dot = doc.createElement('button'); dot.type = 'button'; dot.className = 'xzc-news-dot';
+              dot.setAttribute('aria-label', '第 ' + (index + 1) + ' 篇文章');
+              dot.addEventListener('click', function () { show(index); start(); }); dots.appendChild(dot);
+            });
+          }
+          if (controls) { controls.hidden = cards.length < 2; }
+          show(0); start();
+        }
+      } catch (error) { /* 保留靜態備援，下一次開啟首頁會重新載入。 */ }
+      cleanup();
+    };
+    script.onerror = cleanup;
+    var url = new URL(root.getAttribute('data-blogger-feed') || feedBase);
+    url.searchParams.set('alt', 'json-in-script'); url.searchParams.set('orderby', 'published'); url.searchParams.set('max-results', '10'); url.searchParams.set('callback', callbackName);
+    script.src = url.href; script.async = true;
+    timeout = global.setTimeout(cleanup, 15000);
+    doc.body.appendChild(script);
+  }
+  global.XzcBloggerNews = { init: init, selectEntries: selectEntries };
+  function boot() { Array.prototype.forEach.call(doc.querySelectorAll('[data-blogger-news]'), init); }
+  if (doc.readyState === 'loading') { doc.addEventListener('DOMContentLoaded', boot); } else { boot(); }
+})(window);
+
+</script>
 </body>
 </html>
 
